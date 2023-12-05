@@ -39,7 +39,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
   return (
     <>
-      {posts.map(
+      {[...posts].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).map(
         ({
           _id,
           userId,
