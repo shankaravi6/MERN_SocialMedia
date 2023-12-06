@@ -27,8 +27,8 @@ app.use(express.json({ limit: "10mb" }));
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
-app.use(bodyParser.json({ limit: "50mb", extended: true }));
-app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
+app.use(bodyParser.json({limit: '80mb'}));
+app.use(bodyParser.urlencoded({limit: '80mb', extended: true}));
 app.use(cors());
 // app.use('/assets', express.static(path.join(__dirname, 'public/assets')))
 
